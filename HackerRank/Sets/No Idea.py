@@ -1,11 +1,18 @@
-# Q: https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true
+# Q: https://www.hackerrank.com/challenges/no-idea/problem?isFullScreen=true
 
-def average(array):
-    array=set(array)
-    return sum(array)/len(array)
+def happiness(array,a,b):
+    result=0
+    for num in array:
+        if num in a:
+            result+=1
+        elif num in b:
+            result-=1
+    return result
 
 if __name__ == '__main__':
-    n = int(input())
-    arr = list(map(int, input().split()))
-    result = average(arr)
+    input()
+    array = list(map(int, input().split()))
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    result = happiness(array,a,b)
     print(result)
